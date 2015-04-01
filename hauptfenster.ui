@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>YouTubeVideoChecker</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/icons/pruefe_icon.png</normaloff>:/icons/pruefe_icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBoxKanaeleRechts">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>60</y>
+      <width>311</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Kanäle</string>
+    </property>
+    <widget class="QLineEdit" name="lineEditKanalname">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>350</y>
+       <width>291</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Neuen Kanalnamen hier eingeben.</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonHinzufuegen">
+     <property name="geometry">
+      <rect>
+       <x>214</x>
+       <y>380</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string>Hier klicken um einen neuen Kanal hinzuzufügen.</string>
+     </property>
+     <property name="text">
+      <string>Hinzufügen</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonLoeschen">
+     <property name="geometry">
+      <rect>
+       <x>244</x>
+       <y>310</y>
+       <width>51</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string>Hier klicken um den oben ausgewählten Kanal zu löschen.</string>
+     </property>
+     <property name="text">
+      <string>Löschen</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="listWidgetKanaeleRechts">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>291</width>
+       <height>261</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>421</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>140</y>
+        <width>311</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>keine neuen Videos gefunden</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonPruefen">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>300</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="statusTip">
+       <string>Hier klicken um auf neue Videos zu prüfen.</string>
+      </property>
+      <property name="text">
+       <string>Alle Prüfen</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icons.qrc">
+        <normaloff>:/icons/pruefe_icon.png</normaloff>:/icons/pruefe_icon.png</iconset>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QProgressBar" name="progressBar">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>200</y>
+        <width>291</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>150</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Suche neue Videos...</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QPushButton" name="pushButtonOeffnen">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>320</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Öffnen</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="listWidgetErgebnis">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>391</width>
+        <height>271</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDatei">
+    <property name="title">
+     <string>Datei</string>
+    </property>
+    <addaction name="actionPruefen"/>
+    <addaction name="separator"/>
+    <addaction name="actionBeenden"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="actionInfo"/>
+   </widget>
+   <addaction name="menuDatei"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionPruefen"/>
+   <addaction name="separator"/>
+   <addaction name="actionBeenden"/>
+  </widget>
+  <action name="actionPruefen">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/pruefe_icon.png</normaloff>:/icons/pruefe_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Prüfen</string>
+   </property>
+   <property name="statusTip">
+    <string>Hier klicken um auf neue Videos zu prüfen.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionBeenden">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/exit_icon.png</normaloff>:/icons/exit_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Beenden</string>
+   </property>
+   <property name="statusTip">
+    <string>Hier klicken um das Programm zu beenden.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionInfo">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/info_icon.png</normaloff>:/icons/info_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Info</string>
+   </property>
+   <property name="statusTip">
+    <string>Hier klicken um Informationen über das Programm zu erhalten.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>pushButtonPruefen</tabstop>
+  <tabstop>lineEditKanalname</tabstop>
+  <tabstop>pushButtonHinzufuegen</tabstop>
+  <tabstop>listWidgetKanaeleRechts</tabstop>
+  <tabstop>pushButtonLoeschen</tabstop>
+  <tabstop>pushButtonOeffnen</tabstop>
+  <tabstop>listWidgetErgebnis</tabstop>
+ </tabstops>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
