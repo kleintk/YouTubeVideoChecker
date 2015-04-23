@@ -110,6 +110,9 @@ class Hauptfenster(QMainWindow, hauptfenster.Ui_MainWindow):
 
     def anfrage_an_youtube_server(self, anfrage_url):
         try:
+            #opener = urllib.request.build_opener()
+            #opener.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0')]
+            #f = opener.open(anfrage_url)
             f = urllib.request.urlopen(anfrage_url)
             antwort = f.read().decode(sys.stdout.encoding, 'utf-8')
             f.close()
@@ -123,7 +126,7 @@ class Hauptfenster(QMainWindow, hauptfenster.Ui_MainWindow):
             "https://gdata.youtube.com/feeds/api/users/" + str(nutzer_kanal_name) + "/uploads")
         root = ET.fromstring(antwort)
         entries = root.findall('{http://www.w3.org/2005/Atom}entry')
-        entries = entries[:anzahl_videos]  # nur die neuesten 10 Eintraege
+        entries = entries[1:anzahl_videos]  # nur die neuesten 10 Eintraege, video 1 auslassen,ist hinweis auf API v2
         entries.reverse()  # der neueste eintrag steht konsolen-freundlich unten
 
         ergebnis = []
