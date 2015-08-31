@@ -1,7 +1,9 @@
 YouTubeVideoChecker
 
+Does not longer work. YouTube changed API
+
 Beschreibung:
-Prüft über YouTubeAPI ob neue Videos in den vorher selbst gewählten Kanälen existieren und öffnet diese auf Wunsch im Browser.
-- Abhängigkeiten:
+PrÃ¼ft Ã¼ber YouTubeAPI ob neue Videos in den vorher selbst gewÃ¤hlten KanÃ¤len existieren und Ã¶ffnet diese auf Wunsch im Browser.
+- AbhÃ¤ngigkeiten:
     o Python3
     o PySide
